@@ -5,6 +5,7 @@ public class RSPGame {
             Scanner sc = new Scanner(System.in);
             System.out.println("-----------------가위바위보 게임-------------------");
             System.out.println("가위(0), 바위(1), 보(2) 중에 입력하세요.");
+            System.out.println("게임 종료 (3)");
             System.out.print("입력: ");
             int user = sc.nextInt();
 
@@ -15,10 +16,13 @@ public class RSPGame {
                 System.out.println("Player : 바위");
             } else if (user == 2) {
                 System.out.println("Player : 보");
-            } else {
-                System.out.println("값을 잘못 입력하셨습니다.");
-                System.out.println("게임을 다시 시작해 주십시오.");
+            }else if(user == 3){
+                System.out.println("---------------게임을 종료합니다-------------");
                 break;
+            } else{
+                System.out.println("값을 잘못 입력하셨습니다.");
+                System.out.println("제대로 입력해 주십시오.");
+               continue;
 
             }
 
@@ -31,8 +35,6 @@ public class RSPGame {
                 System.out.println("Computer : 바위");
             } else if (com == 2) {
                 System.out.println("Computer : 보");
-            } else if (user > 2) {
-                break;
             }
 
             if (com - user == -2 || com - user == 1) {
@@ -41,8 +43,6 @@ public class RSPGame {
                 System.out.println("Player VICTORY !! ");
             } else if (com == user) {
                 System.out.println("-- DRAW --");
-            } else if (user > 2) {
-                break;
             }
         }
 
