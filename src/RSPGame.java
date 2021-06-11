@@ -5,7 +5,7 @@ public class RSPGame {
             Scanner sc = new Scanner(System.in);
             System.out.println("-----------------가위바위보 게임-------------------");
             System.out.println("가위(0), 바위(1), 보(2) 중에 입력하세요.");
-            System.out.println("게임 종료 (3)");
+            System.out.println("게임 종료 (0)");
             System.out.print("입력: ");
             int user = sc.nextInt();
 
@@ -16,7 +16,7 @@ public class RSPGame {
                 System.out.println("Player : 바위");
             } else if (user == 2) {
                 System.out.println("Player : 보");
-            }else if(user == 3){
+            }else if(user == 0){
                 System.out.println("---------------게임을 종료합니다-------------");
                 break;
             } else{
